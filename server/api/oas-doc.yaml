@@ -97,6 +97,29 @@ paths:
           content:
             application/json:
               schema: *ref_1
+    post:
+      description: Creates an user
+      operationId: createUser
+      parameters:
+        - required: true
+          name: username
+          description: username of the user to create
+          in: path
+          schema:
+            type: string
+      responses:
+        '201':
+          description: User created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
 components:
   schemas:
     gitaccount: *ref_0

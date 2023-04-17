@@ -8,3 +8,6 @@ export function findByusername(req, res) {
     service.findByusername(req, res);
 }
 
+export function createUser(req, res) {
+    service.createUser(req, res);
+}
