@@ -20,7 +20,7 @@ export function findByusername(req, res) {
 }
 
 export async function _callGithub(username) {
-    const token = "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";
+    const token = '' //falta por añadir funcionalidad token
     const apiUrl = 'https://api.github.com/graphql';
     const requestConfig = { Authorization: "Bearer " + token, Accept: 'application/vnd.github.starfox-preview+json' };
     const query = `{
